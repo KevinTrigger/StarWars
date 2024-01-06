@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    // Подсвечивает все места где не указан тип
+    // "noImplicitAny": true,
+    "module": "ESNext",
+    // В какую спефицикацию компилируем: для поддержки большинства браузеров
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    // Для абсолютного импорта
+    // "baseUrl": ".",
+    // esModuleInterop позволяет работать с пакетами, которые используют
+    // common js как с обычноыми пакетами с помощью import require() module.export.
+    "allowSyntheticDefaultImports": true,
+    // вместо import * as React from 'react'
+    // пишем import React from 'react'
+    "esModuleInterop": true,
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    },
+    "include": ["src/components", "./global.d.ts"]
+  }
+}
